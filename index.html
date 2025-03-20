@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Omelette Recipe</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f3e5d8;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+    }
+
+    .recipe-card {
+      background-color: white;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      max-width: 42rem;
+      width: 100%;
+    }
+
+    .recipe-image {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-family: serif;
+      font-size: 2rem;
+      text-align: left;
+      margin-bottom: 1rem;
+      color: #1f1f1f;
+    }
+
+    .description {
+      text-align: left;
+      color: #1b1b1b;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    .preparation-time {
+      background-color: #f8f4f7;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .preparation-time h3 {
+      color: #984669;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .preparation-time ul {
+      list-style: none;
+    }
+
+    .preparation-time li {
+      margin-bottom: 0.5rem;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .preparation-time li::before {
+      content: "•";
+      color: #984669;
+      position: absolute;
+      left: 0;
+    }
+
+    .preparation-time strong {
+      font-weight: 600;
+    }
+
+    h2 {
+      font-family: Young Serif;
+      font-size: 1.5rem;
+      color: #935e4d;
+      margin-bottom: 1rem;
+    }
+
+    .ingredients ul {
+      padding-left: 1.5rem;
+      list-style: none;
+    }
+
+    .ingredients li {
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+      color: #1b1b1b;
+      position: relative;
+    }
+
+    .ingredients li::before {
+      content: "•";
+      color: #925846;
+      position: absolute;
+      left: -1rem;
+    }
+
+    .instructions ol {
+      padding-left: 1.5rem;
+      list-style: none;
+      counter-reset: instructions;
+    }
+
+    .instructions li {
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      color: #1b1b1b;
+      position: relative;
+      counter-increment: instructions;
+    }
+
+    .instructions li::before {
+      content: counter(instructions) ".";
+      color: #8f6052;
+      position: absolute;
+      left: -1.5rem;
+    }
+
+    .instructions strong {
+      font-weight: 600;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ece6e1;
+      margin: 2rem 0;
+    }
+
+    .nutrition p {
+      color: #1b1b1b;
+      margin-bottom: 1rem;
+    }
+
+    .nutrition table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #1b1b1b;
+    }
+
+    .nutrition td {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #ece6e1;
+    }
+
+    .nutrition td:first-child {
+      color: #666;
+    }
+
+    .nutrition td:last-child {
+      color: #935e4d;
+      font-weight: 600;
+    }
+    @media (max-width: 640px) {
+      .recipe-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="recipe-card">
+      <img 
+        src="image-omelette.jpeg" 
+        alt="Omelette" 
+        class="recipe-image"
+      >
+      
+      <h1><b>Simple Omelette Recipe</b></h1>
+      <p class="description">
+        An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
+        to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+      </p>
+
+      <div class="preparation-time">
+        <h3><b>Preparation time</b></h3>
+        <ul>
+          <li><strong>Total:</strong> Approximately 10 minutes</li>
+          <li><strong>Preparation:</strong> 5 minutes</li>
+          <li><strong>Cooking:</strong> 5 minutes</li>
+        </ul>
+      </div>
+
+      <div class="ingredients">
+        <h2><b>Ingredients</b></h2>
+        <ul>
+          <li>2-3 large eggs</li>
+          <li>Salt, to taste</li>
+          <li>Pepper, to taste</li>
+          <li>1 tablespoon of butter or oil</li>
+          <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+        </ul>
+      </div>
+
+      <hr>
+
+      <div class="instructions">
+        <h2><b>Instructions</b></h2>
+        <ol>
+          <li><strong>Beat the eggs:</strong> In a bowl, beat the eggs with salt and pepper until well mixed. You can add a tablespoon of water or milk for a fluffier texture.</li>
+          <li><strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and add butter or oil.</li>
+          <li><strong>Cook the omelette:</strong> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure even cooking.</li>
+          <li><strong>Add fillings (optional):</strong> When the eggs begin to set but are still slightly runny, sprinkle your chosen fillings over half of the omelette.</li>
+          <li><strong>Fold and serve:</strong> As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate.</li>
+          <li><strong>Enjoy:</strong> Serve hot, with additional salt and pepper if needed.</li>
+        </ol>
+      </div>
+
+      <hr>
+
+      <div class="nutrition">
+        <h2><b>Nutrition</b></h2>
+        <p>The table below shows nutritional values per serving without additional fillings.</p>
+        <table>
+          <tr>
+            <td>Calories</td>
+            <td>277kcal</td>
+          </tr>
+          <tr>
+            <td>Carbs</td>
+            <td>0g</td>
+          </tr>
+          <tr>
+            <td>Protein</td>
+            <td>20g</td>
+          </tr>
+          <tr>
+            <td>Fat</td>
+            <td>22g</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
